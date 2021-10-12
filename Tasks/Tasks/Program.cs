@@ -70,5 +70,17 @@ namespace Tasks
             }
             return true;
         }
+
+        public static int[] FifthTask(int[] array1, int[] array2)
+        {
+            int[] newarray1 = array1.GroupBy(x => x).SelectMany(x => x.Skip(1)).ToArray();
+            int[] newarray2 = array2.GroupBy(x => x).SelectMany(x => x.Skip(1)).ToArray();
+
+            int[] newarray3 = newarray1.Intersect(newarray2).ToArray();
+
+            //return array1.GroupBy(x => x).SelectMany(x => x.Skip(1)).Intersect(array2.GroupBy(x => x).SelectMany(x => x.Skip(1))).ToArray();
+
+            return newarray3;
+        }
     }
 }
