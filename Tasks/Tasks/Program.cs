@@ -71,6 +71,7 @@ namespace Tasks
             return true;
         }
 
+        // ~30-35 min
         public static int[] FifthTask(int[] array1, int[] array2)
         {
             int[] newarray1 = array1.GroupBy(x => x).SelectMany(x => x.Skip(1)).ToArray();
