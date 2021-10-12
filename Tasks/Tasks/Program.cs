@@ -39,8 +39,27 @@ namespace Tasks
             }
         }
 
+        // ~ 10-15 min
+        public static string ThirdTask(int number)
+        {
+            string helper = number.ToString();
+            int a = helper[helper.Length - 1] - '0';
+            if (Enumerable.Range(2, 4).Contains(a))
+            {
+                return $"{number} компьютера";
+            }
+            else if (a % 10 == 1)
+            {
+                return $"{number} компьютер";
+            }
+            else
+            {
+                return $"{number} компьютеров";
+            }
+        }
+
         // ~10-15 min
-        public static bool ThirdTask(int number)
+        public static bool FourthTask(int number)
         {
             for (int i = 2; i <= number / 2; i++)
             {
