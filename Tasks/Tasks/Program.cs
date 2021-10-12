@@ -38,5 +38,18 @@ namespace Tasks
                     return helper;
             }
         }
+
+        // ~10-15 min
+        public static bool ThirdTask(int number)
+        {
+            for (int i = 2; i <= number / 2; i++)
+            {
+                if (number % i == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }
